@@ -40,9 +40,14 @@ Data Center Power Index (DCPI), DC Hub (dchub.cloud), <YYYY-MM-DD>, https://dchu
 
 ## Licence
 
-Verdicts and composite scores are published under CC BY 4.0. For days from
-2026-12-01, a day's full market list enters this repository 30 days after it closes
-(DC Hub's [current-data terms](https://dchub.cloud/terms#dcpi-current-data)). The
+Verdicts and composite scores for days before 2026-12-01 are CC BY 4.0. A verdict or
+composite for a day on or after 2026-12-01 comes under CC BY 4.0 30 days after that day.
+Until then it is current data: free to read and to quote in editorial work, for any
+number of markets; bulk or recurring republishing needs a DCPI licence
+([current-data terms](https://dchub.cloud/terms#dcpi-current-data)). So for those days,
+a day's full market list enters this repository 30 days after it closes. DCPI
+sub-scores are not in this repository and are not CC BY 4.0. Full terms:
+https://dchub.cloud/data-sources. The
 code in `scripts/` and `.github/` is MIT.
 
 Archive: https://dchub.cloud/dcpi/history · Methodology: https://dchub.cloud/dcpi/methodology/
