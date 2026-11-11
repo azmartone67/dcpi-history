@@ -1,0 +1,19 @@
+{
+  "canonical_form": "JSON array of one object per market, sorted by market_slug; keys = the listed columns in sorted order; null for a missing value; numbers as stored (IEEE-754 double, shortest round-trip form); UTF-8; separators ',' and ':' with no whitespace; sha256 of those bytes",
+  "citation": "Data Center Power Index (DCPI), DC Hub (dchub.cloud), 2026-08-28, https://dchub.cloud/dcpi/history#d-2026-08-28",
+  "dataset": "Data Center Power Index (DCPI) daily snapshot",
+  "date": "2026-08-28",
+  "markets": 323,
+  "method_version_missing": 0,
+  "method_versions": [
+    "2.3.0"
+  ],
+  "public_columns": [
+    "market_slug",
+    "verdict",
+    "composite_score",
+    "method_version"
+  ],
+  "public_sha256": "2bd8d39451bd5f75a8197508da4adb2e844b9bb21b89465f8dd69afdab7f2b90",
+  "verify": "Rebuild public_sha256 from https://dchub.cloud/api/v1/data/dcpi-markets/2026-08-28.json (rows, public_columns only)."
+}
