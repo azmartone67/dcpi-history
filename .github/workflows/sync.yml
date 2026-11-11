@@ -1,0 +1,38 @@
+name: daily sync
+
+# One commit per day with that day's manifest and the month's CSV.
+# The DC Hub snapshot is written around 05:40 UTC; this runs after it.
+on:
+  schedule:
+    - cron: "20 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull manifests and monthly files
+        run: python scripts/sync.py
+      - name: Commit if anything changed
+        run: |
+          git add manifests data
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git config user.name "dcpi-history-sync"
+          git config user.email "dcpi-history-sync@users.noreply.github.com"
+          git commit -m "data: $(date -u +%F)"
+          git push
