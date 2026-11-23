@@ -27,6 +27,14 @@ For each new manifest, the script downloads that day's public file
 canonical form and compares the sha256. A stored manifest is never rewritten. If
 DC Hub ever served a different fingerprint for a closed day, the run would fail.
 
+## Coverage update, 2026-11-23
+
+On 2026-11-23 DC Hub narrowed the coverage of the published market list. Every stored
+manifest and monthly file was regenerated once, in a single commit, from the files
+DC Hub serves now; each new fingerprint was re-verified against its day file. The
+earlier manifests stay in this repository's history. Apart from this one update, a
+stored manifest is never rewritten.
+
 ## Open access
 
 Any AI agent or MCP server, including other data providers', may call the

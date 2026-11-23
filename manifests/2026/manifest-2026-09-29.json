@@ -3,7 +3,7 @@
   "citation": "Data Center Power Index (DCPI), DC Hub (dchub.cloud), 2026-09-29, https://dchub.cloud/dcpi/history#d-2026-09-29",
   "dataset": "Data Center Power Index (DCPI) daily snapshot",
   "date": "2026-09-29",
-  "markets": 334,
+  "markets": 268,
   "method_version_missing": 0,
   "method_versions": [
     "2.4.0"
@@ -14,6 +14,6 @@
     "composite_score",
     "method_version"
   ],
-  "public_sha256": "150d6027dfd82ce3c2bf5477930d14b8ac819b20f99e79632f0a8ae9247df2ea",
+  "public_sha256": "ab3b6e35a129b1beda9b6160f651b280d58dc9f982c8e11ff85bc0183e9ec14b",
   "verify": "Rebuild public_sha256 from https://dchub.cloud/api/v1/data/dcpi-markets/2026-09-29.json (rows, public_columns only)."
 }
